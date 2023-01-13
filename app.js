@@ -47,13 +47,18 @@ for (let message of dataArr) {
 // taking user input for search
 
 readline.question(`What are you looking for?`, query => {
-    
+    // quitting program if empty query
+    if(query.length < 1) {
+        readline.close()
+        return;
+    }
     let messages = [];
+    // making everything lower case for wider matching
     let regex = query.toLowerCase();
     console.log(query)
     for (const msg of msgArr) {
         let message = msg.content;
-        if (message.toLowerCase().match(query)) {
+        if (message.toLowerCase().match(regex)) {
             messages.push(msg);
         }
     }
