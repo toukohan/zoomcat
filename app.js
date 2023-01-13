@@ -18,7 +18,7 @@ class Message {
 let timeStampRegex = /\d\d:\d\d:\d\d\s/;
 
 // file to read
-let input = "test.txt"
+let input = "test.txt";
 
 // reading the input file in "files" folder
 const data = fs.readFileSync(path.join(__dirname, "/files/", "test.txt"), 'utf-8');
@@ -42,8 +42,6 @@ for (let message of dataArr) {
     if (newMessage.content != '') msgArr.push(newMessage);
 }
 
-//console.log(msgArr)
-
 // taking user input for search
 
 readline.question(`What are you looking for?`, query => {
@@ -52,10 +50,12 @@ readline.question(`What are you looking for?`, query => {
         readline.close()
         return;
     }
+    // creating an array for the matching messages
     let messages = [];
     // making everything lower case for wider matching
     let regex = query.toLowerCase();
-    console.log(query)
+    console.log(query);
+    // looking for matching words in contents of each message
     for (const msg of msgArr) {
         let message = msg.content;
         if (message.toLowerCase().match(regex)) {
