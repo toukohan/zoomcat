@@ -48,14 +48,14 @@ function readFiles(files) {
   });
 }
 
-readFiles(files);
-
 // creating array for messages
 
 let msgArr = [];
 
+readFiles(files);
 createMessages(dataArr);
 search();
+
 // going through the messages in data and pushing them in the msgArr as objects
 function createMessages(dataArr) {
   for (let message of dataArr) {

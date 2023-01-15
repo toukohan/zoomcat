@@ -1,0 +1,49 @@
+/*
+font-family: 'DM Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+body {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 auto;
+    text-align: center;
+    background-color: darkslateblue;
+    color:gainsboro;
+
+}
+
+.container {
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 20px auto;
+    max-width: 450px;
+    background-color: mediumslateblue;
+}
+
+.title h1 {
+    color: darkslateblue;
+    background-color: gainsboro;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+.description {
+    font-size: .7rem;
+    line-height: 0.5;
+}
+
+.btn {
+    border-radius: 5px;
+    color: darkslateblue;
+    background-color: gainsboro;
+    border-color: darkslateblue;
+}
+
+.msg {
+    color: darkslateblue;
+    background-color: gainsboro;
+}
