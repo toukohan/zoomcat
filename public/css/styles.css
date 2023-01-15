@@ -22,14 +22,29 @@ body {
     background-color: mediumslateblue;
 }
 
+.nav {
+    margin-top: 5px;
+    position: relative;
+}
+
+.title {
+    padding: 10px;
+    background-color: gainsboro;
+    color: mediumslateblue;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
 .title h1 {
     color: darkslateblue;
-    background-color: gainsboro;
     text-transform: uppercase;
     font-weight: 700;
     padding: 0;
     margin: 0;
     line-height: 1;
+}
+
+.title a {
+    text-decoration: none;
 }
 .description {
     font-size: .7rem;
@@ -42,8 +57,53 @@ body {
     background-color: gainsboro;
     border-color: darkslateblue;
 }
+.btn:hover {
+    color: gainsboro;
+    background-color: darkslateblue;
+}
 
-.msg {
+.btn-dummy {
+    border-radius: 5px;
     color: darkslateblue;
     background-color: gainsboro;
+    border-color: mediumslateblue;
+    
+}
+
+.upload {
+    color: gainsboro;
+}
+
+.upload label {
+    font-size: 0.7rem;
+    line-height: 0.8;
+}
+.msg {
+    border-radius: 5px;
+    color: darkslateblue;
+    background-color: gainsboro;
+}
+
+.msg-text {
+    font-size: .8rem;
+    
+}
+
+.message {
+    background-color: darkslateblue;
+    margin-bottom: 5px;
+    padding: 0 5px;
+    border: 1px solid darkslateblue;
+    text-align: left;
+    font-size: .8rem;
+    line-height: .5;
+}
+
+.signup a {
+    text-decoration: none;
+    color: darkslateblue;
+
+}
+.signup a:hover {
+    color: white;
 }

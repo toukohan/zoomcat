@@ -17,26 +17,33 @@
     <div class="nav">
         <div class="signup">
             <a href="/login"><button class="btn">Login</button></a>
-            <a href="/signup"><button class="btn">Sign up</button></a>
+            <a href="/register"><button class="btn">Sign up</button></a>
         </div>
     </div>
     <div class="container">
 
         <div class="title">
-            <h1>zoomcat</h1>
+            <a href="/">
+                <h1>zoomcat</h1>
+            </a>
             <p class="description">Search from zoom chat history files</p>
-            <p class="msg">
-                <%= msg %>
-            </p>
-        </div>
-        <div class="file-upload">
 
+        </div>
+
+        <div class="upload">
             <form action="/" method="post" enctype="multipart/form-data">
-                <label class="file-upload" for="file">Upload file:</label>
+                <label class="file-upload" for="files">Select file(s) to upload and submit</label>
                 <br>
-                <input type="file" name="file" id="file" multiple>
+                <input type="file" name="files" id="files" multiple>
                 <button class="btn" type="submit">Submit</button>
             </form>
+
+        </div>
+
+        <div class="msg">
+            <p class="msg-text">
+                <%= msg %>
+            </p>
         </div>
         <div class="search">
 
@@ -52,11 +59,14 @@
                 <h3 class="results">Results</h3>
                 <hr>
                 <% messages.forEach(message=> { %>
-                    <p class="sender">Sender: <%= message.sender %>
-                    </p>
-                    <p class="content">Message:
-                        <%= message.content %>
-                    </p>
+                    <div class="message">
+
+                        <p class="sender">Sender: <%= message.sender %>
+                        </p>
+                        <p class="content">Message:
+                            <%= message.content %>
+                        </p>
+                    </div>
                     <% })} %>
         </div>
     </div>

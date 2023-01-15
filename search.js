@@ -3,7 +3,7 @@ const path = require("path");
 
 let folder = __dirname + "/uploads/";
 
-// message object
+// class for creating message objects
 class Message {
   constructor(sender, receiver, content) {
     this.sender = sender;
@@ -17,7 +17,7 @@ module.exports = function search(query) {
 
   let files = fs.readdirSync(folder);
 
-  console.log(files);
+  //console.log(files);
 
   let dataArr = [];
 
@@ -26,7 +26,7 @@ module.exports = function search(query) {
       path.join(__dirname, "/uploads/", file),
       "utf-8"
     );
-    console.log(data);
+    // console.log(data);
 
     const rawMessages = data.split(timeStampRegex);
     rawMessages.forEach((msg) => {
@@ -49,13 +49,13 @@ module.exports = function search(query) {
     // only push message in the array if it has content
     if (newMessage.content != "") msgArr.push(newMessage);
   }
-  console.log("here is msgArr:", msgArr);
+  // console.log("here is msgArr:", msgArr);
   // creating an array for the matching messages
   let messages = [];
 
   // making everything lower case for wider matching
   let regex = query.toLowerCase();
-  console.log(query);
+  // console.log(query);
 
   // looking for matching words in contents of each message
   for (const msg of msgArr) {
