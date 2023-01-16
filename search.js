@@ -3,6 +3,10 @@ const path = require("path");
 
 let folder = __dirname + "/uploads/";
 
+// create uploads directory if it doesn't exist
+
+if(!fs.existsSync("./uploads")) fs.mkdirSync("./uploads")
+
 // class for creating message objects
 class Message {
   constructor(sender, receiver, content) {

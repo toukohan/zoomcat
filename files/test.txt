@@ -1,0 +1,25 @@
+:ä
+09:18:16 From  Jouni Huotari  to  Everyone:
+	Teams => chat => Jani Hallberg (lainakoneen nouto)
+09:31:39 From  Bea  to  Everyone:
+	Onko palvelinohjelmointi nodella?
+09:33:24 From  Bea  to  Everyone:
+	Onko myös kubernetes?
+09:36:14 From  Jouni Huotari  to  Everyone:
+	@bEA Nodella joo ja ei ole kubernetestä
+09:50:00 From  Tuija Hämäläinen  to  Everyone:
+	Kiitos Pekki!
+09:52:45 From  Jouni Huotari  to  Everyone:
+	https://panopto.jamk.fi/Panopto/Pages/Viewer.aspx?id=8828e062-d96f-4391-ba25-af8501052f8f
+10:09:25 From  Jouni Huotari  to  Everyone:
+	Teamsiin (Ohjelmistoalan osaaja) koodi: xmwb7ui
+10:47:51 From  Salla Lipasti  to  Everyone:
+	Onko muuten opintoihin valittavissa WordPress-kurssia, jos sillä haluaisi tehdä kotisivuja? Ihan siis harrastuksena siis.
+11:00:05 From  Jouni Huotari  to  Everyone:
+	https://jamkstudent-my.sharepoint.com/:x:/g/personal/jouni_huotari_jamk_fi/EWgPsZsI7DVCj4fFGXFR9GkB09M97ELUIexBZWyAE4RURw?e=JzHqpp
+11:08:17 From  Tuija Hämäläinen  to  Everyone:
+	Mitenkä tallennetaan omat valinnat?
+11:09:19 From  Sanni Kattilakoski  to  Everyone:
+	Laitat vaan rastit Exceliin. Ne tallentuvat automaattisesti. 🙂
+11:09:31 From  Tuija Hämäläinen  to  Everyone:
+	Ookke, thankka juu :)
