@@ -2,6 +2,7 @@ const express = require("express");
 const multer = require("multer");
 const sqlite3 = require("sqlite3");
 const bcrypt = require("bcryptjs");
+const session = require("express-session");
 
 const db = require("./db");
 const search = require("./search");
@@ -21,13 +22,25 @@ const app = express();
 
 //setting up ejs
 app.set("view engine", "ejs");
+
 // public folder
 app.use(express.static("public"));
+
 // url encoding to deal with the form data
 app.use(express.urlencoded({ extended: false }));
 
+// use express-session
+
+app.use(
+  session({
+    secret: "very secret hush hush",
+    resave: false,
+    saveUninitialized: true,
+  })
+);
+
 app.get("/", (req, res) => {
-  res.render("index", { msg: "", messages: [] });
+  res.render("index", { msg: "", messages: [], user: req.session.user });
 });
 
 app.get("/register", (req, res) => {
@@ -79,7 +92,13 @@ app.post("/login", (req, res) => {
       res.render("login", { msg: "No such user found." });
     } else {
       if (bcrypt.compareSync(req.body.password, row.password)) {
-        res.render("index", { msg: "Login succesful", messages: [] });
+        req.session.user = row.username;
+        console.log(req.session.user);
+        res.render("index", {
+          msg: "Login succesful",
+          messages: [],
+          user: req.session.user,
+        });
       } else {
         res.render("login", { msg: "Password doesn't match" });
       }
@@ -89,9 +108,13 @@ app.post("/login", (req, res) => {
 
 app.post("/", upload.array("files"), (req, res) => {
   if (req.files) {
-    res.render("index", { msg: "File uploaded", messages: [] });
+    res.render("index", {
+      msg: "File uploaded",
+      messages: [],
+      user: req.session.user,
+    });
   } else {
-    res.render("index", { msg: "", messages: [] });
+    res.render("index", { msg: "", messages: [], user: req.session.user });
   }
 });
 
@@ -101,7 +124,13 @@ app.post("/search", (req, res) => {
   res.render("index", {
     msg: "searched for: " + query,
     messages: messages,
+    user: req.session.user,
   });
+});
+
+app.get("/logout", (req, res) => {
+  req.session.destroy();
+  res.redirect("/");
 });
 
 let port = process.env.PORT || 3000;

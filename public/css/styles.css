@@ -107,3 +107,8 @@ body {
 .signup a:hover {
     color: white;
 }
+
+.logout {
+    display: flex;
+    justify-content: center;
+}

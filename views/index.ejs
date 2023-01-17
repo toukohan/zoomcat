@@ -16,8 +16,17 @@
 <body>
     <div class="nav">
         <div class="signup">
-            <a href="/login"><button class="btn">Login</button></a>
-            <a href="/register"><button class="btn">Sign up</button></a>
+            <% if(!user) { %>
+
+                <a href="/login"><button class="btn">Login</button></a>
+                <a href="/register"><button class="btn">Sign up</button></a>
+                <% } else { %>
+                    <div class="logout">
+
+                        <p class="user">Logged in as: <%= user %>
+                        </p><a href="/logout"><button class="btn">Logout</button></a>
+                    </div>
+                    <% } %>
         </div>
     </div>
     <div class="container">
